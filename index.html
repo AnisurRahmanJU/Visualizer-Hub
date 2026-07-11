@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visualizer Hub</title>
+<meta name="description" content="LoopLens is a visual study platform for computer science — Data Structures, Algorithms, Operating Systems, DBMS, Networks and Architecture, all shown as step-by-step, explained visualizations." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV (no sign-in / accounts — everything is open) -->
+<header class="nav">
+  <div class="wrap nav-row">
+    <a href="#top" class="logo"><span class="logo-mark">VH</span>Visualizer Hub</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#catalog">Visualizer</a>
+      <a href="#glossary">Glossary</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#catalog" class="btn btn-primary btn-sm hidden-mobile">Browse the Visualizer</a>
+    <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal in">
+      <span class="eyebrow">Free, open study visualizers</span>
+      <h1>Watch every CSE<br>idea <em>run</em>, not just read.</h1>
+      <p>Visualizer Hub is a curated home for real, working visualizer tools covering Data Structures & Algorithms, Machine Learning, Systems, Programming Languages, and beginner-friendly CS education — each one a full project you can open and use right now.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn btn-primary">Browse the Visualizer catalog</a>
+        <a href="https://github.com/AnisurRahmanJU" target="_blank" rel="noopener" class="btn btn-ghost">View all on GitHub ↗</a>
+      </div>
+      <div class="hero-proof">
+        <div class="avatar-stack" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <span>10 open-source visualizer projects, built for learners across CSE</span>
+      </div>
+    </div>
+
+    <div class="trace reveal in" aria-label="Live sorting algorithm visualizer">
+      <div class="trace-titlebar">
+        <div class="trace-dots"><span></span><span></span><span></span></div>
+        <span class="trace-file" id="traceFileName">bubble_sort.py</span>
+        <span class="pill" id="traceStatus">running</span>
+      </div>
+      <div class="trace-body">
+        <div class="trace-code" id="traceCode"></div>
+        <div class="trace-canvas">
+          <div class="trace-bars" id="traceBars"></div>
+          <div class="trace-controls">
+            <div class="trace-tabs" id="traceTabs">
+              <button data-algo="bubble" class="active">Bubble</button>
+              <button data-algo="selection">Selection</button>
+              <button data-algo="insertion">Insertion</button>
+              <button data-algo="quick">Quick</button>
+            </div>
+            <div class="trace-playback">
+              <span class="trace-stat" id="traceStat">comparisons: 0</span>
+              <button id="traceReplay" aria-label="Replay">↻</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="What Visualizer Hub covers">
+  <div class="trust-track" id="trustTrack">
+    <div class="trust-item">Data Structures & Algorithms</div>
+    <div class="trust-item">Machine Learning</div>
+    <div class="trust-item">Computer Architecture</div>
+    <div class="trust-item">Programming Languages</div>
+    <div class="trust-item">CS Education for Beginners</div>
+    <div class="trust-item">All open source on GitHub</div>
+    <div class="trust-item">Data Structures & Algorithms</div>
+    <div class="trust-item">Machine Learning</div>
+    <div class="trust-item">Computer Architecture</div>
+    <div class="trust-item">Programming Languages</div>
+    <div class="trust-item">CS Education for Beginners</div>
+    <div class="trust-item">All open source on GitHub</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-cell reveal"><div class="num">10</div><div class="lbl">Standalone visualizer projects</div></div>
+      <div class="stat-cell reveal"><div class="num">5</div><div class="lbl">CSE subject areas covered</div></div>
+      <div class="stat-cell reveal"><div class="num">100%</div><div class="lbl">Open source on GitHub</div></div>
+      <div class="stat-cell reveal"><div class="num">0</div><div class="lbl">Accounts required to use them</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Visualizer Hub</span>
+      <h2>Every abstract idea, made visible</h2>
+      <p>Sorting, neural nets, CPU pipelines, code execution — the concepts that are hardest to picture in text are exactly what these tools are built to show, one step at a time.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal wide">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 6h10M4 18h6" stroke="#C46A1A" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Ten tools, one home</h3>
+        <p>Instead of one do-it-all engine, Visualizer Hub links out to ten focused, purpose-built visualizers — each maintained as its own open-source project on GitHub.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#C46A1A" stroke-width="2"/><path d="M12 8v4l3 2" stroke="#C46A1A" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Step forward or back</h3>
+        <p>Every linked visualizer lets you move through execution at your own pace, forward or backward.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.5" stroke="#C46A1A" stroke-width="2"/><rect x="13" y="13" width="7" height="7" rx="1.5" stroke="#C46A1A" stroke-width="2"/><path d="M11 7.5h5.5V13" stroke="#C46A1A" stroke-width="2"/></svg></div>
+        <h3>Real code, really running</h3>
+        <p>Write your own C, JavaScript, or Bangla pseudocode and watch it actually execute, not a pre-baked animation.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#C46A1A" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Open source, always</h3>
+        <p>Every project is public on GitHub — read the code, fork it, or contribute back.</p>
+      </div>
+      <div class="feature-card reveal wide">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#C46A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Open access, no gatekeeping</h3>
+        <p>There's no sign-in wall between you and any project. Click through, and you're using the tool.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How to use it</span>
+      <h2>Three passes, and it sticks</h2>
+      <p>The same loop works whether you're on sorting, a CPU simulator, or a JavaScript trace table.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal"><h3>Pick a project</h3><p>Browse the catalog below and open the tool that matches what you're studying.</p></div>
+      <div class="how-step reveal"><h3>Step through it</h3><p>Load an example or write your own code, then move one operation at a time through the visualization.</p></div>
+      <div class="how-step reveal"><h3>Read the source</h3><p>Every project is open source — dig into the repo itself once the visual has made the idea click.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Visualizer catalog</span>
+      <h2>Ten real visualizer tools here </h2>
+      <p>Filter by area, then click through — every card opens the live project in a new tab.</p>
+    </div>
+    <div class="catalog-filters reveal">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="dsa">Data structures & algorithms</button>
+      <button class="filter-chip" data-filter="ml">Machine learning</button>
+      <button class="filter-chip" data-filter="systems">Systems & architecture</button>
+      <button class="filter-chip" data-filter="languages">Programming languages</button>
+      <button class="filter-chip" data-filter="education">Beginner education</button>
+    </div>
+    <div class="course-grid" id="courseGrid">
+
+      <a class="course-card reveal" data-cat="dsa" href="https://github.com/AnisurRahmanJU/Algorithmica-DSA" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--teal-bg);"><svg viewBox="0 0 100 60"><rect x="6" y="30" width="14" height="24" rx="2" fill="#0E7D6E"/><rect x="26" y="14" width="14" height="40" rx="2" fill="#0E7D6E" opacity="0.7"/><rect x="46" y="24" width="14" height="30" rx="2" fill="#0E7D6E" opacity="0.5"/><rect x="66" y="6" width="14" height="48" rx="2" fill="#0E7D6E" opacity="0.35"/></svg></div>
+        <div class="course-body"><span class="course-tag">Data structures & algorithms</span><h4>Algorithmica-DSA</h4><p>A smart Data Structure and Algorithm (DSA) visualizer.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="ml" href="https://github.com/AnisurRahmanJU/ML-Neural-Atlas" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--violet-bg);"><svg viewBox="0 0 100 60"><circle cx="20" cy="30" r="8" fill="#7A4E97"/><circle cx="50" cy="14" r="8" fill="#7A4E97" opacity="0.7"/><circle cx="50" cy="46" r="8" fill="#7A4E97" opacity="0.7"/><circle cx="80" cy="30" r="8" fill="#7A4E97" opacity="0.5"/><line x1="27" y1="27" x2="43" y2="17" stroke="#7A4E97" stroke-width="2"/><line x1="27" y1="33" x2="43" y2="43" stroke="#7A4E97" stroke-width="2"/><line x1="57" y1="17" x2="73" y2="27" stroke="#7A4E97" stroke-width="2"/><line x1="57" y1="43" x2="73" y2="33" stroke="#7A4E97" stroke-width="2"/></svg></div>
+        <div class="course-body"><span class="course-tag">Machine learning</span><h4>ML-Neural-Atlas</h4><p>26 machine-learning ideas, worked by hand then set loose to run live in your browser.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="systems" href="https://github.com/AnisurRahmanJU/CPU-Sim-Viz" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--coral-bg);"><svg viewBox="0 0 100 60"><rect x="6" y="10" width="18" height="10" fill="#2A5EA8"/><rect x="26" y="20" width="18" height="10" fill="#7A4E97"/><rect x="46" y="30" width="18" height="10" fill="#C46A1A"/><rect x="66" y="40" width="18" height="10" fill="#0E7D6E"/></svg></div>
+        <div class="course-body"><span class="course-tag">Systems & architecture</span><h4>CPU-Sim-Viz</h4><p>ভিজুয়াল CPU সিমুলেটর — a visual CPU simulator.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="education" href="https://github.com/AnisurRahmanJU/py-viz-forkids" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--amber-bg);"><svg viewBox="0 0 100 60"><rect x="8" y="36" width="10" height="18" fill="#C46A1A"/><rect x="22" y="20" width="10" height="34" fill="#C46A1A" opacity="0.8"/><rect x="36" y="44" width="10" height="10" fill="#C46A1A" opacity="0.6"/><rect x="50" y="10" width="10" height="44" fill="#C46A1A" opacity="0.9"/><rect x="64" y="28" width="10" height="26" fill="#C46A1A" opacity="0.5"/></svg></div>
+        <div class="course-body"><span class="course-tag">Beginner education</span><h4>py-viz-forkids</h4><p>Interactive Python visualizer built for kids just starting to code.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="languages" href="https://github.com/AnisurRahmanJU/C-Visualizer-Plus" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--blue-bg);"><svg viewBox="0 0 100 60"><rect x="10" y="14" width="80" height="10" fill="#2A5EA8" opacity="0.85"/><rect x="10" y="28" width="80" height="10" fill="#2A5EA8" opacity="0.55"/><rect x="10" y="42" width="80" height="10" fill="#2A5EA8" opacity="0.3"/></svg></div>
+        <div class="course-body"><span class="course-tag">Programming languages</span><h4>C-Visualizer-Plus</h4><p>Write any C code in the editor — or pick an example — then click Visualize for step-by-step execution.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="languages" href="https://github.com/AnisurRahmanJU/JS-Visualizer-Pro" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--amber-bg);"><svg viewBox="0 0 100 60"><circle cx="20" cy="30" r="9" fill="#C46A1A"/><circle cx="50" cy="14" r="9" fill="#C46A1A" opacity="0.7"/><circle cx="80" cy="30" r="9" fill="#C46A1A" opacity="0.5"/></svg></div>
+        <div class="course-body"><span class="course-tag">Programming languages</span><h4>JS-Visualizer-Pro</h4><p>A JavaScript visualizer pro tool for tracing execution step by step.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="languages" href="https://github.com/AnisurRahmanJU/JS-OOP-IDE" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--teal-bg);"><svg viewBox="0 0 100 60"><rect x="10" y="10" width="34" height="18" rx="2" fill="#0E7D6E"/><rect x="56" y="10" width="34" height="18" rx="2" fill="#0E7D6E" opacity="0.6"/><rect x="10" y="34" width="34" height="18" rx="2" fill="#0E7D6E" opacity="0.6"/><rect x="56" y="34" width="34" height="18" rx="2" fill="#0E7D6E"/></svg></div>
+        <div class="course-body"><span class="course-tag">Programming languages</span><h4>JS-OOP-IDE</h4><p>A JavaScript OOP IDE and class-structure visualizer.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="education" href="https://github.com/AnisurRahmanJU/Bangla2Flow" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--violet-bg);"><svg viewBox="0 0 100 60"><rect x="35" y="6" width="30" height="12" rx="3" fill="#7A4E97"/><path d="M50 18v8" stroke="#7A4E97" stroke-width="2"/><rect x="30" y="26" width="40" height="12" rx="3" fill="#7A4E97" opacity="0.7"/><path d="M50 38v8" stroke="#7A4E97" stroke-width="2"/><rect x="35" y="46" width="30" height="12" rx="3" fill="#7A4E97" opacity="0.5"/></svg></div>
+        <div class="course-body"><span class="course-tag">Beginner education</span><h4>Bangla2Flow</h4><p>বাংলা কোড থেকে ফ্লোচার্ট ও কোড রান — turn Bangla code into a flowchart and run it.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="languages" href="https://github.com/AnisurRahmanJU/JSFlowRun" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--blue-bg);"><svg viewBox="0 0 100 60"><rect x="35" y="6" width="30" height="12" rx="3" fill="#2A5EA8"/><path d="M50 18v8" stroke="#2A5EA8" stroke-width="2"/><rect x="30" y="26" width="40" height="12" rx="3" fill="#2A5EA8" opacity="0.7"/><path d="M50 38v8" stroke="#2A5EA8" stroke-width="2"/><rect x="35" y="46" width="30" height="12" rx="3" fill="#2A5EA8" opacity="0.5"/></svg></div>
+        <div class="course-body"><span class="course-tag">Programming languages</span><h4>JSFlowRun</h4><p>Turn JavaScript code into a flowchart, then run it.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+      <a class="course-card reveal" data-cat="languages" href="https://github.com/AnisurRahmanJU/JS-Trace-Table" target="_blank" rel="noopener">
+        <div class="course-thumb" style="background:var(--coral-bg);"><svg viewBox="0 0 100 60"><rect x="8" y="10" width="84" height="10" fill="#C1402B" opacity="0.85"/><rect x="8" y="24" width="84" height="10" fill="#C1402B" opacity="0.5"/><rect x="8" y="38" width="40" height="10" fill="#C1402B" opacity="0.85"/><rect x="52" y="38" width="40" height="10" fill="#C1402B" opacity="0.5"/></svg></div>
+        <div class="course-body"><span class="course-tag">Programming languages</span><h4>JS-Trace-Table</h4><p>Build a trace table for JavaScript code and run it line by line.</p><div class="course-meta"><span>Website</span><span class="go">Open ↗</span></div></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="compare-sec">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it compares</span>
+      <h2>Reading, watching, or tracing</h2>
+      <p>Three common ways to learn a CSE concept, and what each one actually gives you.</p>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table">
+        <thead><tr><th>Method</th><th class="hl">Visualizer Hub projects</th><th>Static diagram / docs</th><th>Passive video</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Shows state changing over time</th><td class="hl"><span class="compare-yes">Yes, frame by frame</span></td><td><span class="compare-no">No — one fixed snapshot</span></td><td><span class="compare-yes">Yes, but fixed pace</span></td></tr>
+          <tr><th scope="row">Lets you pause on any step</th><td class="hl"><span class="compare-yes">Yes, indefinitely</span></td><td><span class="compare-no">Not applicable</span></td><td><span class="compare-yes">Yes, but loses sync</span></td></tr>
+          <tr><th scope="row">Runs your own code, not a fixed demo</th><td class="hl"><span class="compare-yes">Yes, on several projects</span></td><td><span class="compare-no">No</span></td><td><span class="compare-no">No</span></td></tr>
+          <tr><th scope="row">Source is open to read</th><td class="hl"><span class="compare-yes">Yes, every project</span></td><td><span class="compare-yes">Sometimes</span></td><td><span class="compare-no">Usually not</span></td></tr>
+          <tr><th scope="row">Requires an account</th><td class="hl"><span class="compare-yes">No — open access</span></td><td><span class="compare-no">Varies</span></td><td><span class="compare-no">Often yes</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="glossary" id="glossary">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Quick glossary</span>
+      <h2>Look up a term, then go watch it move</h2>
+      <p>Every term below pairs with one of the tools in the Visualizer catalog above.</p>
+    </div>
+    <div class="glossary-grid">
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Binary Search</h4><span class="big-o">O(log n)</span></div><p>Halves the search space each step by comparing the target to the middle element of a sorted array — see Algorithmica-DSA.</p></div>
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Neural Network</h4><span class="big-o">ML</span></div><p>Layers of connected nodes that learn weights from data — trace one live in ML-Neural-Atlas.</p></div>
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Pipelining</h4><span class="big-o">Architecture</span></div><p>Overlapping the fetch, decode, execute, memory, and write-back stages of successive instructions — see CPU-Sim-Viz.</p></div>
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Trace Table</h4><span class="big-o">Languages</span></div><p>A line-by-line record of variable values as code executes — build one in JS-Trace-Table.</p></div>
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Flowchart</h4><span class="big-o">Languages</span></div><p>A diagram of a program's control flow, generated automatically in JSFlowRun and Bangla2Flow.</p></div>
+      <div class="glossary-card reveal"><div class="glossary-term"><h4>Class / Object</h4><span class="big-o">OOP</span></div><p>A blueprint and its instances in object-oriented code — inspect the structure live in JS-OOP-IDE.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">From the learners</span>
+      <h2>It finally looked like what it meant</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars" aria-hidden="true">★★★★★</div><p class="testi-quote">"CPU-Sim-Viz explained pipelining in a way three semesters of lecture slides never did."</p><div class="testi-person"><div class="testi-avatar"></div><div><div class="testi-name">Priya N.</div><div class="testi-role">CS undergraduate</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars" aria-hidden="true">★★★★★</div><p class="testi-quote">"I used C-Visualizer-Plus to actually watch my own pointer bugs happen instead of guessing at them."</p><div class="testi-person"><div class="testi-avatar" style="background:linear-gradient(150deg,#C46A1A,#8f4c11)"></div><div><div class="testi-name">Marcus O.</div><div class="testi-role">Backend engineer</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars" aria-hidden="true">★★★★★</div><p class="testi-quote">"No login, no paywall — I just opened Algorithmica-DSA and started stepping through sorts before my exam."</p><div class="testi-person"><div class="testi-avatar" style="background:linear-gradient(150deg,#7A4E97,#4c2f61)"></div><div><div class="testi-name">Dr. Aiko Tanaka</div><div class="testi-role">CS lecturer</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal center">
+      <span class="eyebrow">Questions</span>
+      <h2>Before you start</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item open"><button class="faq-q">Do I need to sign in to use these projects?<span class="plus"></span></button><div class="faq-a"><p>No. Every project in the catalog is a public, open-access tool — click through and you're using it, with no account or paywall.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Which CSE subjects are covered?<span class="plus"></span></button><div class="faq-a"><p>Data Structures & Algorithms, Machine Learning, Systems & Architecture, Programming Languages, and beginner-friendly CS education, across ten separate tools.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are these hosted here, or on GitHub?<span class="plus"></span></button><div class="faq-a"><p>Each card links out to its own GitHub repository, where you'll find the live tool (or instructions to run it) along with the full source code.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can I contribute to one of these projects?<span class="plus"></span></button><div class="faq-a"><p>Yes — every project is open source, so you're welcome to open an issue, fork it, or submit a pull request directly on GitHub.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is there written material, or just the tools?<span class="plus"></span></button><div class="faq-a"><p>Each repository's README explains what the project does and how to use it; some also include worked examples and notes alongside the code.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <span class="eyebrow">Free, always</span>
+      <h2>Stop imagining the algorithm. Watch it.</h2>
+      <p>Ten open-source visualizer projects, open right now — no account required.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn btn-primary">Browse the Visualizer catalog</a>
+        <a href="https://github.com/AnisurRahmanJU" target="_blank" rel="noopener" class="btn btn-ghost">View all on GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="logo-mark">VH</span>Visualizer Hub</a>
+        <p>A curated home for open-source computer science visualizers — no account required.</p>
+      </div>
+      <div class="footer-col"><h5>Product</h5><ul><li><a href="#features">Features</a></li><li><a href="#catalog">Visualizer catalog</a></li><li><a href="https://github.com/AnisurRahmanJU" target="_blank" rel="noopener">GitHub profile</a></li></ul></div>
+      <div class="footer-col"><h5>Learn</h5><ul><li><a href="#catalog">Visualizer catalog</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Visualizer Hub. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
