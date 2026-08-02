@@ -39,7 +39,7 @@
   --violet-bg:#EFE4F5;
 
   --display:'Space Grotesk','Inter',sans-serif;
-  --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif, 'Hind Siliguri';
   --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
 
   --radius-sm:6px;
@@ -50,7 +50,6 @@
   --shadow-pop: 0 18px 46px -16px rgba(40,32,10,0.22);
 
   --ease: cubic-bezier(.22,.9,.3,1);
-  font-family: 'Hind Siliguri';
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
