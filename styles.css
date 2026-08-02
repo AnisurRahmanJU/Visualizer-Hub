@@ -50,6 +50,7 @@
   --shadow-pop: 0 18px 46px -16px rgba(40,32,10,0.22);
 
   --ease: cubic-bezier(.22,.9,.3,1);
+  font-family: 'Hind Siliguri';
 }
 
 *, *::before, *::after{ box-sizing:border-box; }
@@ -74,7 +75,7 @@ table{ border-collapse:collapse; }
 body{
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--body), 'Hind Siliguri';
+  font-family: var(--body);
   font-size:16px;
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
